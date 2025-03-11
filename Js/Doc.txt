@@ -1,0 +1,10 @@
+VAriables,scopes
+DEStructuring
+Modules
+function
+array methods-map filter reduce foreach
+Ternary operator & shortcircuiting & optional chaining Operator 
+Promises & callbackks
+ async and Await 
+ error handling
+ oops

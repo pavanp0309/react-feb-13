@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            padding: 2rem;
+            border:2px solid red;
+            width: 200px;
+            height: 250px;
+            background-color: gold;
+        }
+        .child{
+            padding: 1.26rem;
+            border:2px solid red;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(255, 0, 212);
+        }
+        .c1{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+  <form action="" onsubmit="Sol()">
+    <input type="text" id="search">
+    <input type="submit">
+  </form>
+    <!-- directly attaching the events -->
+    <button onclick="data()">click</button>
+    <!-- dom attributes -->
+    <div class="card">
+        <img src="" alt="no-img" >
+        <div class="card-body">
+            <h3>iphone case</h3>
+            <p>100rs</p>
+            <button id="id1">click-2</button>
+        </div>
+    </div>
+<!-- 3way -->
+    <button id="id2">click-3</button>
+
+    <div class="parent">
+    <div class="child">
+        <button class="btn btn-1">click1</button>
+        <button class="btn btn-2">click2</button>
+    </div>
+    </div>
+    <ul class="delegat">
+        <li>item1</li>
+        <li>item3</li>
+        <li>item3</li>
+    </ul>
+<script src="events.js"></script>
+</body>
+</html>
