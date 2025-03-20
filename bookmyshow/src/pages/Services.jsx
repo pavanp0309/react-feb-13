@@ -5,8 +5,8 @@ import { Outlet } from "react-router-dom";
 const Services = () => {
   return (
     
-    <div className="d-flex justify-content-center my-4">
-      <ul className="nav nav-pills">
+    <div className="">
+      <ul className="nav nav-pills my-3">
         <li className="nav-item">
           <Link className="nav-link active" to={"/services/movie"}>
             

@@ -10,6 +10,7 @@ import BookTableCard from "./components/BookTableCard";
 import { Routes, Route } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 import Navbar from "./components/Navbar";
+import Movies from "./pages/Movies";
 
 
 const App = () => {
@@ -21,9 +22,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/movies" element={<Movies />} />
         {/* nested routing */}
         <Route path="/services" element={<Services />}>{/* parent Route */}
-          {/* children routes */}
+          {/* children routes -http://localhost:5173/services/movie/*/}
           {/* index: helps in rendering one component by default */}
           <Route index element={<BookMovieCard />} />{/* child Route */}
           <Route path="movie" element={<BookMovieCard />} />{/* child Route */}
