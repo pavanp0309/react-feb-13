@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 import Navbar from "./components/Navbar";
 import Movies from "./pages/Movies";
+import MovieDeatils from "./pages/MovieDeatils";
 
 
 const App = () => {
@@ -22,7 +23,15 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/movies" element={<Movies />} />
+
+        {/* Dynamic Routing - */}
+        <Route path="/movies" element={<Movies />} /> 
+        {/* step1: in dynamic routing (creating dynmic path) */}
+        <Route path="/movies/:movieId" element={<MovieDeatils/>} /> 
+
+
+
+
         {/* nested routing */}
         <Route path="/services" element={<Services />}>{/* parent Route */}
           {/* children routes -http://localhost:5173/services/movie/*/}
@@ -31,6 +40,9 @@ const App = () => {
           <Route path="movie" element={<BookMovieCard />} />{/* child Route */}
           <Route path="table" element={<BookTableCard />} />{/* child Route */}
         </Route>
+
+
+
         {/* error handling  */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>

@@ -1,18 +1,23 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const MovieCard = (props) => {
-    const {}=props.movies
+  const { title, year, rating, genre, poster, director,id } = props.movies;
   return (
-    <div className='card'>
-       <img src="" alt=""  className='img-fluid'/>
-       <div className="card-body">
-        <h1 className='card-title'>{'dj'}</h1>
-        <p className='card-text'>{"⭐⭐⭐"}</p>
-        <p className='card-text'>{"vishwas"}</p>
-        <button className='btn btn-success'>book ticket</button>
-       </div>
-    </div>
-  )
-}
+    <div className="card shadow border border-danger">
+      <img src={poster} alt="" className="img-fluid" />
+      <Link to={`/movies/${id}`}  className="nav-link">{/* passing dynamic movie id to the url */}
+        
+        <div className="card-body">
+          <h3 className="card-title">{title}</h3>
+          <p className="card-text">Year:{year}</p>
+          <p className="card-text">Rating:{rating}</p>
 
-export default MovieCard
+          <button className="btn btn-success">book ticket</button>
+        </div>
+      </Link>
+    </div>
+  );
+};
+
+export default MovieCard;
