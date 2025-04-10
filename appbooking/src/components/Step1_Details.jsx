@@ -10,10 +10,10 @@ const DetailsForm = () => {
     }
 
   return (
-    <div className='container'>
+    <div className='container border border-white p-5 rounded shadow'>
         {/* name filed */}
       <input 
-       className='form-control'
+       className='form-control p-3  '
        type="text"
        placeholder='enter ur fullname' 
        value={appointment.name}
@@ -21,17 +21,17 @@ const DetailsForm = () => {
       />
       {/* email Filed */}
       <input 
-       className='form-control'
+       className='form-control my-3 p-3'
        type="email"
-       placeholder='enter ur fullname' 
+       placeholder='enter ur email' 
        value={appointment.email}
        onChange={(e)=>updateFileds("email",e.target.value)}
       />
      <input 
-       className='form-control'
+       className='form-control mb-3 p-3'
        type="tel"
        maxLength={10}
-       placeholder='enter ur fullname' 
+       placeholder='enter ur Mobile' 
        value={appointment.mobile}
        onChange={(e)=>updateFileds("mobile",e.target.value)}
       />
